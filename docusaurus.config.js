@@ -4,10 +4,10 @@ const math = require("remark-math");
 const katex = require("rehype-katex");
 
 module.exports = {
-  title: "Puffer Docs",
-  tagline: "Documentation for the Puffer Protocol",
+  title: "Secure-Signer",
+  tagline: "Documentation for Secure-Signer",
   url: "https://pufferFinance.github.io",
-  baseUrl: "/docs-dev/",
+  baseUrl: "/secure-signer/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -48,7 +48,7 @@ module.exports = {
             // },
             {
               label: "GitHub",
-              href: "https://github.com/PufferFinance",
+              href: "https://github.com/PufferFinance/secure-signer",
             },
           ],
         },

@@ -24,7 +24,11 @@ const sidebars = {
       type: "category",
       label: "Installation",
       items: [
-        "intro",
+        "environment",
+        "install-prereqs",
+        "setup",
+        "run",
+        "developers",
       ],
     }
   ],
