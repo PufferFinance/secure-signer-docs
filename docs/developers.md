@@ -1,4 +1,4 @@
 ---
 title: Developers
-slug: /setup
+slug: /Developers
 ---
