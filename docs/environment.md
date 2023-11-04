@@ -5,6 +5,10 @@ slug: /environment
 
 This helps walk you through how to set things up on azure, we recommend this wonderful [guide](https://mirror.xyz/ladislaus.eth/joTqwZ1sBLxlJayV4pIYxCkwl4RWheM_xipU_OCp9MM) if you're running from home.
 
+# Setting up an SGX instance on local environment
+
+Please follow this [toturial](https://mirror.xyz/ladislaus.eth/joTqwZ1sBLxlJayV4pIYxCkwl4RWheM_xipU_OCp9MM) prepared by our community to prepare your environment for locally SGX enabled computer.
+
 # Setting up an SGX instance on Azure
 
 Secure-Signer has been developed and tested on Microsoft Azure. The goal of this guide is to expedite setting up your own Azure server. Stay tuned for more information on setting up Secure-Signer at home or on other cloud providers.
@@ -41,19 +45,19 @@ Set SSH credentials according to your needs. In this case we will generate a new
 
 ![azure6](/img/azure_6.png)
 
-Add any additional configurations that fit your needs. Then select `Review and Create`. Verify the OS image and VM size are correct. Then `Create` the VM.
+Add any additional configurations that fit your needs using the `Next:Disk` botton.
 
 ---
 
 ![azure7](/img/azure_7.png)
 
-Securely store the SSH private key, for example in the `~/.ssh/` directory.
+Pick the storage for the virtual machine.
 
 ---
 
 ![azure8](/img/azure_8.png)
 
-Once deployment finishes, select `Go to resource`.
+Select `Review + create` and your VM will be deployed.
 
 ---
 
@@ -79,32 +83,24 @@ Confirm `Yes` and wait for confirmation that is has been stopped.
 
 ![azure12](/img/azure_12.png)
 
-Navigate to the `Disks` tabs on under `Settings` on the left-hand side.
+Select your `Disk Name` and navigate to the `Disks` tabs on under `Settings` on the left-hand side.
 
 ---
 
 ![azure13](/img/azure_13.png)
 
-Select your `Disk name` in this case `Secure-Signer_OsDisk_1_04e04e...`
+Select `Size + performance` under `Settings` on the left-hand side.
+Select a disk size and click `Save`. In this case, a 1024 GiB disk is sufficient to store the required state for the execution client.
 
 ---
 
 ![azure14](/img/azure_14.png)
 
-Select `Size + performance` under `Settings` on the left-hand side.
-
----
+## Slect `Start`.
 
 ![azure15](/img/azure_15.png)
 
-Select a disk size and click `Save`. In this case, a 1024 GiB disk is sufficient to store the required state for the execution client.
-
----
-
-![azure16](/img/azure_16.png)
-
-![azure17](/img/azure_17.png)
-Navigate back to the overview page and `Start` the VM again.
+Check the netofocation to confirm the start of the virtual machine.
 
 ---
 
@@ -112,7 +108,7 @@ In a terminal run the following, substituting your server’s IP and the path to
 
 > `ssh -i <path_to_ssh_key> ss@XX.XX.XXX.XXX`
 
-![azure18](/img/azure_18.png)
+![azure16](/img/azure_16.png)
 
 Congratulations! At this point you are ready to proceed to the [next section](../installation) to install the dependencies for Secure-Signer.
 
