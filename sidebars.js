@@ -28,9 +28,10 @@ const sidebars = {
         "install-prereqs",
         "setup",
         "run",
+        "client",
         "developers",
       ],
-    }
+    },
   ],
 };
 
